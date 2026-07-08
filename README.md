@@ -21,6 +21,9 @@ Random seeds were not fixed during the original graph-generation runs. Therefore
 
 - `README.md` — description of the repository contents and reproduction workflow.
 
+- `B_cluster_final.txt` — final node-level Floquet control parameters \(B_i\) used for the clustering protocol in Fig. 6. The file contains two columns: node index and the corresponding value of \(B_i\).
+The global gauge is fixed by setting the first node parameter to zero after the final shift.
+
 ## Reproducibility
 
 The deposited edge-list files are the exact network realizations used in the manuscript. Since random seeds were not fixed during graph generation, these files should be used directly rather than regenerating the graphs.
@@ -28,6 +31,9 @@ The deposited edge-list files are the exact network realizations used in the man
 `Model.ipynb` reads the deposited edge lists and constructs the Floquet-renormalized effective adjacency matrix
 
 `A_eff[i,j] = A[i,j] * J0(B_i - B_j)`.
+
+The final control parameters used for the clustering visualization in Fig. 6 are provided in `B_cluster_final.txt`.
+This file records the node-level values of \(B_i\) used to construct the Floquet-renormalized weights shown in the figure.
 
 The notebook then computes the spectra, inverse participation ratios, betweenness centrality, and clustering visualizations used in the manuscript.
 
@@ -49,7 +55,7 @@ The notebook then computes the spectra, inverse participation ratios, betweennes
   Built in `Model.ipynb`.
 
 - Fig. 6 — clustering protocol based on Floquet-renormalized edge weights.  
-  Built in `Model.ipynb`.
+  Built in `Model.ipynb`; the final node-level control parameters are provided in `B_cluster_final.txt`.
 
 ## Run in Google Colab
 
