@@ -86,5 +86,3 @@ The R notebook uses:
 ## Notes
 
 The scale-free exponent reported in the manuscript caption, approximately `2.46`, was obtained a posteriori by fitting the degree distribution of the finite generated network. It is not the input generation exponent. The input exponent used in the generation procedure was `gamma_in = 2.4`.
-
-All node labels are used consistently within each notebook and the corresponding edge-list files.
